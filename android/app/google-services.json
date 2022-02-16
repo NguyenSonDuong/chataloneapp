@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "787621397672",
+    "project_id": "chatalone-10754",
+    "storage_bucket": "chatalone-10754.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787621397672:android:776df66e7609f680edae9d",
+        "android_client_info": {
+          "package_name": "com.example.flutter_socket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787621397672-69akl51jmbgg1hmnvirhpn9mrmun6mq2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flutter_socket",
+            "certificate_hash": "73dbcc167d3167770ca5342a67f50108058cc414"
+          }
+        },
+        {
+          "client_id": "787621397672-809s6v88vru4tvhqkc9pgeakfd3pb7k3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDczCCeKBYHlwuMXkrXYQHGIh4bJGRBkKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787621397672-809s6v88vru4tvhqkc9pgeakfd3pb7k3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
