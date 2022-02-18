@@ -89,75 +89,75 @@ class WecomeState extends State<WecomeStateful> {
                   borderRadius: BorderRadius.all(Radius.circular(30)),
                 ),
                 child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    TextButton(
-                        onPressed: () => {clickRegister()},
-                        style: TextButton.styleFrom(
-                            padding: EdgeInsets.zero,
-                            minimumSize: Size(50, 30),
-                            alignment: Alignment.centerLeft),
-                        child: Container(
-                          margin: EdgeInsets.zero,
-                          height: 80,
-                          width: 175,
-                          decoration: BoxDecoration(
-                            color: isRegisterCLick
-                                ? Colors.white
-                                : Color.fromARGB(255, 59, 58, 65),
-                            border: Border.all(
-                              color: Colors.transparent,
-                              width: 0,
+                    Expanded(
+                      child: TextButton(
+                          
+                          onPressed: () => {clickRegister()},
+                          style: TextButton.styleFrom(
+                              padding: EdgeInsets.zero,
+                              alignment: Alignment.centerLeft),
+                          child: Container(
+                            margin: EdgeInsets.zero,
+
+                            decoration: BoxDecoration(
+                              color: isRegisterCLick
+                                  ? Colors.white
+                                  : Color.fromARGB(255, 59, 58, 65),
+                              border: Border.all(
+                                color: Colors.transparent,
+                                width: 0,
+                              ),
+                              borderRadius: BorderRadius.all(Radius.circular(30)),
                             ),
-                            borderRadius: BorderRadius.all(Radius.circular(30)),
-                          ),
-                          child: Center(
-                            child: Text(
-                              "Đăng ký",
-                              style: GoogleFonts.sourceSansPro(
-                                color: isRegisterCLick
-                                    ? Color.fromARGB(255, 24, 23, 31)
-                                    : Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
+                            child: Center(
+                              child: Text(
+                                "Đăng ký",
+                                style: GoogleFonts.sourceSansPro(
+                                  color: isRegisterCLick
+                                      ? Color.fromARGB(255, 24, 23, 31)
+                                      : Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
-                          ),
-                        )),
-                    TextButton(
-                        onPressed: () => {clickLogin()},
-                        style: TextButton.styleFrom(
-                            padding: EdgeInsets.zero,
-                            minimumSize: Size(50, 30),
-                            alignment: Alignment.centerLeft),
-                        child: Container(
-                          margin: EdgeInsets.zero,
-                          height: 80,
-                          width: 175,
-                          decoration: BoxDecoration(
-                            color: isLoginCLick
-                                ? Colors.white
-                                : Color.fromARGB(255, 59, 58, 65),
-                            border: Border.all(
-                              color: Colors.transparent,
-                              width: 0,
+                          )),
+                    ),
+                    Expanded(
+                      child: TextButton(
+                          onPressed: () => {clickLogin()},
+                          style: TextButton.styleFrom(
+                              padding: EdgeInsets.zero,
+                              alignment: Alignment.centerLeft),
+                          child: Container(
+                            margin: EdgeInsets.zero,
+                            decoration: BoxDecoration(
+                              color: isLoginCLick
+                                  ? Colors.white
+                                  : Color.fromARGB(255, 59, 58, 65),
+                              border: Border.all(
+                                color: Colors.transparent,
+                                width: 0,
+                              ),
+                              borderRadius: BorderRadius.all(Radius.circular(30)),
                             ),
-                            borderRadius: BorderRadius.all(Radius.circular(30)),
-                          ),
-                          child: Center(
-                            child: Text(
-                              "Đăng nhập",
-                              style: GoogleFonts.sourceSansPro(
-                                color: isLoginCLick
-                                    ? Color.fromARGB(255, 59, 58, 65)
-                                    : Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
+                            child: Center(
+                              child: Text(
+                                "Đăng nhập",
+                                style: GoogleFonts.sourceSansPro(
+                                  color: isLoginCLick
+                                      ? Color.fromARGB(255, 59, 58, 65)
+                                      : Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
-                          ),
-                        ))
+                          )),
+                    )
                   ],
                 ),
               )

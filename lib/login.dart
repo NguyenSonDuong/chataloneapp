@@ -115,6 +115,7 @@ class LoginScreen extends State<LoginPageStateful> {
     // TODO: implement build
     return MaterialApp(
       home: Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: Color.fromARGB(255, 24, 23, 31),
         body: Stack(
           children: [

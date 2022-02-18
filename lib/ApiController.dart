@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class API {
-  static final HOST = "http://117.5.237.5:8080";
+  static final HOST = "http://42.119.49.151:8080";
 
   static Future<String> Register(username, password, birthday, sex) async {
     var headers = {'Content-Type': 'application/json'};
@@ -84,16 +84,36 @@ class API {
 
 
   }
+
+
+
   static Future<String> SetEvaluate(token,String username,int point) async {
     var headers = {
       'Authorization': '${token!}',
       'Content-Type': 'application/x-www-form-urlencoded',
     };
-    var request = http.Request('POST', Uri.parse('localhost:8080/api/user/evaluate'));
+    var request = http.Request('POST', Uri.parse(HOST+'/api/user/evaluate'));
     request.bodyFields = {
-      'username': '${username!}',
-      'point': '${point!}'
+      'username': '${username}',
+      'point': '${point}'
     };
+    request.headers.addAll(headers);
+
+    http.StreamedResponse response = await request.send();
+    if (response.statusCode == 200) {
+      return await response.stream.bytesToString();
+    }
+    else {
+      throw new Exception(response.statusCode);
+    }
+
+  }
+  static Future<String> GetEvaluate(String token,String username) async {
+    var headers = {
+      'Authorization': '${token}',
+    };
+    var request = http.Request('GET', Uri.parse(HOST+'/api/user/evaluate?username='+username));
+    request.bodyFields = {};
     request.headers.addAll(headers);
 
     http.StreamedResponse response = await request.send();
@@ -112,8 +132,8 @@ class API {
     };
     var request = http.Request('POST', Uri.parse(HOST+'/api/user/changepassword'));
     request.bodyFields = {
-      'oldpassword': '${oldPassword!}',
-      'newpassword': '${newPassword!}'
+      'oldpassword': '${oldPassword}',
+      'newpassword': '${newPassword}'
     };
     request.headers.addAll(headers);
 

@@ -28,7 +28,7 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState(user, userTo);
 }
 
-final socketUrl = 'http://117.5.237.5:8080/ws';
+final socketUrl = 'http://42.119.49.151:8080/ws';
 
 class _MyHomePageState extends State<MyHomePage> {
   User user;
@@ -53,6 +53,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 .jumpTo(_scrollController.position.maxScrollExtent + 50);
           }
         });
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
   }
 
   @override
@@ -240,6 +246,8 @@ class MessageItem extends StatelessWidget {
 
   MessageItem(this.message);
 
+
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -283,6 +291,8 @@ class AppBarHeader extends StatelessWidget {
 
   User user;
   UserListInfor userTo;
+
+
 
 
   AppBarHeader(this.name, this.timeActive, this.user, this.userTo);

@@ -139,105 +139,111 @@ class UserlistScreen extends State<UserlistStateful> {
                             margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
                             child: Row(
                               children: [
-                                Container(
-                                  margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 2),
-                                  decoration: BoxDecoration(
-                                      color: Color.fromARGB(255, 59, 58, 65),
-                                      borderRadius: BorderRadius.circular(10)),
-                                  child: DropdownButton<String>(
-                                    value: selectValue,
-                                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                                    underline: SizedBox(),
-                                    elevation: 3,
-                                    dropdownColor: Color.fromARGB(255, 59, 58, 65),
-                                    style: GoogleFonts.sourceSansPro(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                    onChanged: (String? sex){
-                                      setState(() => selectValue = sex!);
-                                      GetListSort(this.user.token, selectMin, selectMax, selectValue);
-                                    },
-                                    items: listtTypeSex.map<DropdownMenuItem<String>>((String e)  {
-                                      return DropdownMenuItem<String>(value: e ,
-                                          child: Text(
-                                            e,style: GoogleFonts.sourceSansPro(
-                                              color: Colors.white,
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.bold),) );
-
-                                    }).toList(),
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.fromLTRB(15, 0, 0, 0),
-                                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 2),
-                                  decoration: BoxDecoration(
-                                      color: Color.fromARGB(255, 59, 58, 65),
-                                      borderRadius: BorderRadius.circular(10)),
-                                  child: DropdownButton<int>(
-                                    value: selectMin,
-                                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                                    underline: SizedBox(),
-                                    elevation: 3,
-                                    dropdownColor: Color.fromARGB(255, 59, 58, 65),
-                                    style: GoogleFonts.sourceSansPro(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                    onChanged: (int? min){
-                                      setState(() => selectMin = min!);
-                                      GetListSort(this.user.token, min, selectMax, selectValue);
-                                    },
-                                    items: listtDOB.map<DropdownMenuItem<int>>((int e)  {
-                                      return DropdownMenuItem<int>(
-                                          value: e,
-                                          child: Text(
-                                            '${e}',
-                                            style: GoogleFonts.sourceSansPro(
+                                Expanded(
+                                  child: Container(
+                                    margin: EdgeInsets.all(3),
+                                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 2),
+                                    decoration: BoxDecoration(
+                                        color: Color.fromARGB(255, 59, 58, 65),
+                                        borderRadius: BorderRadius.circular(10)),
+                                    child: DropdownButton<String>(
+                                      value: selectValue,
+                                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                                      underline: SizedBox(),
+                                      elevation: 3,
+                                      dropdownColor: Color.fromARGB(255, 59, 58, 65),
+                                      style: GoogleFonts.sourceSansPro(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                      onChanged: (String? sex){
+                                        setState(() => selectValue = sex!);
+                                        GetListSort(this.user.token, selectMin, selectMax, selectValue);
+                                      },
+                                      items: listtTypeSex.map<DropdownMenuItem<String>>((String e)  {
+                                        return DropdownMenuItem<String>(value: e ,
+                                            child: Text(
+                                              e,style: GoogleFonts.sourceSansPro(
                                                 color: Colors.white,
                                                 fontSize: 20,
-                                                fontWeight: FontWeight.bold),
-                                          )
-                                      );
+                                                fontWeight: FontWeight.bold),) );
 
-                                    }).toList(),
+                                      }).toList(),
+                                    ),
                                   ),
                                 ),
-                                Container(
-                                  margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 2),
-                                  decoration: BoxDecoration(
-                                      color: Color.fromARGB(255, 59, 58, 65),
-                                      borderRadius: BorderRadius.circular(10)),
-                                  child: DropdownButton<int>(
-                                    value: selectMax,
-                                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                                    underline: SizedBox(),
-                                    elevation: 3,
-                                    dropdownColor: Color.fromARGB(255, 59, 58, 65),
-                                    style: GoogleFonts.sourceSansPro(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                    onChanged: (int? max){
-                                      setState(() => selectMax = max!);
-                                      GetListSort(this.user.token, selectMin, max, selectValue);
-                                    },
-                                    items: listtDOB.map<DropdownMenuItem<int>>((int e)  {
-                                      return DropdownMenuItem<int>(
-                                          value: e,
-                                          child: Text(
-                                            '${e}',
-                                            style: GoogleFonts.sourceSansPro(
-                                                color: Colors.white,
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.bold),
-                                          )
-                                      );
+                                Expanded(
+                                  child: Container(
+                                    margin: EdgeInsets.all(3),
+                                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 2),
+                                    decoration: BoxDecoration(
+                                        color: Color.fromARGB(255, 59, 58, 65),
+                                        borderRadius: BorderRadius.circular(10)),
+                                    child: DropdownButton<int>(
+                                      value: selectMin,
+                                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                                      underline: SizedBox(),
+                                      elevation: 3,
+                                      dropdownColor: Color.fromARGB(255, 59, 58, 65),
+                                      style: GoogleFonts.sourceSansPro(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                      onChanged: (int? min){
+                                        setState(() => selectMin = min!);
+                                        GetListSort(this.user.token, min, selectMax, selectValue);
+                                      },
+                                      items: listtDOB.map<DropdownMenuItem<int>>((int e)  {
+                                        return DropdownMenuItem<int>(
+                                            value: e,
+                                            child: Text(
+                                              '${e}',
+                                              style: GoogleFonts.sourceSansPro(
+                                                  color: Colors.white,
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.bold),
+                                            )
+                                        );
 
-                                    }).toList(),
+                                      }).toList(),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Container(
+                                    margin: EdgeInsets.all(3),
+                                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 2),
+                                    decoration: BoxDecoration(
+                                        color: Color.fromARGB(255, 59, 58, 65),
+                                        borderRadius: BorderRadius.circular(10)),
+                                    child: DropdownButton<int>(
+                                      value: selectMax,
+                                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                                      underline: SizedBox(),
+                                      elevation: 3,
+                                      dropdownColor: Color.fromARGB(255, 59, 58, 65),
+                                      style: GoogleFonts.sourceSansPro(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                      onChanged: (int? max){
+                                        setState(() => selectMax = max!);
+                                        GetListSort(this.user.token, selectMin, max, selectValue);
+                                      },
+                                      items: listtDOB.map<DropdownMenuItem<int>>((int e)  {
+                                        return DropdownMenuItem<int>(
+                                            value: e,
+                                            child: Text(
+                                              '${e}',
+                                              style: GoogleFonts.sourceSansPro(
+                                                  color: Colors.white,
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.bold),
+                                            )
+                                        );
+
+                                      }).toList(),
+                                    ),
                                   ),
                                 )
                               ],

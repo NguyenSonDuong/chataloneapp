@@ -78,7 +78,7 @@ class MenuScreen extends State<MenuStateful> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.fromLTRB(0, 150, 0, 0),
+                      margin: EdgeInsets.fromLTRB(0, 70, 0, 0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
@@ -134,7 +134,7 @@ class MenuScreen extends State<MenuStateful> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.fromLTRB(0, 100, 0, 0),
+                      margin: EdgeInsets.fromLTRB(0, 50, 0, 0),
                       child: Column(
                         children: [
                           Text(
